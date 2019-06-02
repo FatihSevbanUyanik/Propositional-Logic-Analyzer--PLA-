@@ -1,0 +1,86 @@
+LogicAnalyzer {
+
+    var_string param1 = "xyz";
+    val_logic const1 = true;
+    var_num $myNumber = 554;    
+    
+    var_list myList = [
+        "item1", 
+        56564, 
+        "Ali Dayı", 
+        "dasda",
+        0,
+	false
+    ];
+
+    var_num $listItem = $myList[1];
+
+    for(item: myList) {
+        print(item);
+    };
+
+    var_num $i = 0;
+    while($i < 50) {
+        println("How Are You?");
+	$i = $i + 1;
+    };
+
+    predicate greater ($param3, $param4 ) :: {
+        return $param3 > $param4;
+    };
+
+    var_logic value1 = true;
+    var_logic value2 = false;
+
+    if (value1 & value2 & (10 < 20) & (value1 => value2)) {
+       println("Value1 and Value 2 are not equal.");
+    };
+       
+    var_num $number1 = 200;
+    var_num $number2 = 300;
+
+    /* This is a comment bro */
+        
+    var_logic result = greater($number1, $number2);
+    println ( result );
+    	  
+    var_logic a = true;
+    var_logic b = false;
+    var_logic c = true;
+    var_logic d = false;
+    
+    input<< a;    
+    println(a |~| b);
+    println(a <==> b);
+ 
+  
+    var_logic e = (a ~| b);
+    var_logic f = (a ~& b);
+    var_logic islem = ((a & b) | c) => d;
+    
+    var_logic islem = ~f;
+    print(islem);
+    println("Result: ", islem);
+
+    var_num $tempNumber = $number1;
+    val_num $num = 52 + 98; 
+
+    var_logic resultLogic = (a & b) | myList[5];
+    var_logic preResult = greater($number + $num, $myList[1]);
+    
+    var_string ans;
+    
+    if(5 < 3) { 
+    	 ans = "impossible"; 
+    };
+
+    var_num $yourFace = 100;
+    var_num $myFace = 1000;
+
+    if($yourFace < ($myFace) * 100) { 
+    	ans = "yourFace is smaller"; 
+    } else {
+      	ans = "yourFace is bigger * 100"; 
+    };
+
+}
